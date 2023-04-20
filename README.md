@@ -1,2 +1,2 @@
 # fullstack-film-blog
-Film reviews site
+Film reviews site using the MERN stack
