@@ -1,0 +1,15 @@
+@use '../base/color' as c;
+
+.article-list-item {
+  color: inherit;
+  text-decoration: none;
+
+  &:hover {
+    color: c.$success;
+  }
+
+  p {
+    padding-bottom: 1rem;
+    border-bottom: 1px solid c.$secondary;
+  }
+}
