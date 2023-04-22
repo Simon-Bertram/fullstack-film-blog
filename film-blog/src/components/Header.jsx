@@ -1,8 +1,14 @@
+import Branding from "./Branding";
 import Nav from "./Nav";
 
 const Header = () => {
   return (
-    <Nav />
+    <header id="main-header">
+      <div className="container">
+        <Nav />
+        <Branding />
+      </div>
+    </header>
   )
 }
 

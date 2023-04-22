@@ -1,0 +1,7 @@
+@use '../base/color' as c;
+
+#main-header {
+  background-color: c.$primary;
+  color: #fff;
+  padding: 1rem;
+}

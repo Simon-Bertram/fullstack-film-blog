@@ -13,6 +13,7 @@ import ArticlePage from './pages/ArticlePage'
 import ArticlesListPage from './pages/ArticlesListPage'
 import SubmitReview from './pages/SubmitReview'
 import NotFoundPage from './pages/NotFoundPage'
+import './styles/main.scss'
 
 const router = createBrowserRouter(createRoutesFromElements(
   <Route path='/' element={<Root />}>

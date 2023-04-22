@@ -1,32 +1,27 @@
 @use '../base/color' as *;
 @use '../base/variables' as *;
 
-// Navbar
+nav {
 
-.bg-primary {
-  .navbar-nav .show > .nav-link,
-  .navbar-nav .nav-link.active,
-  .navbar-nav .nav-link:hover,
-  .navbar-nav .nav-link:focus {
-    color: $success !important;
+  ul {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
   }
-}
 
-// Navs
-
-.nav-tabs {
-  .nav-link.active,
-  .nav-link.active:focus,
-  .nav-link.active:hover,
-  .nav-item.open .nav-link,
-  .nav-item.open .nav-link:focus,
-  .nav-item.open .nav-link:hover {
-    color: $primary;
-  }
-}
-
-.pagination {
-  a:hover {
+  a {
+    display: block;
+    padding: $nav-link-padding-y $nav-link-padding-x;
+    color: inherit;
     text-decoration: none;
+    transition: color .15s ease-in-out;
+
+    &:hover {
+      color: $success;
+    }
+  }
+
+  .nav-branding {
+    display: flex;
   }
 }
