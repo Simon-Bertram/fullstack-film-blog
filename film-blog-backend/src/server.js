@@ -12,8 +12,7 @@ app.get('/api/articles/:name', async (req, res) => {
   if (article) {
     res.json(article);
   } else {
-    return
-    // res.sendStatus(404).send('Article not found.');
+    res.send('Article not found.');
   }
 });
 
@@ -26,7 +25,7 @@ app.put('/api/articles/:name/upvote', async (req, res) => {
   const article = await db.collection('articles').findOne({ name });
 
   if (article) {
-    res.send(`The ${name} article now has ${article.upvotes} upvotes!`);
+    res.json(article);
   } else {
     res.send('That article doesn\'t exist.');
   }

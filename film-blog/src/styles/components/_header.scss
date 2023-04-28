@@ -3,7 +3,7 @@
 
 #main-header {
   background-color: c.$primary;
-  background-image: radial-gradient(circle, color.adjust(c.$primary,$lightness: 15%), c.$primary);
+  background-image: radial-gradient(circle, color.adjust(c.$primary,$lightness: 20%), c.$primary);
   color: #fff;
   padding: 1rem;
 }

@@ -6,7 +6,7 @@ const CommentsList = ({ comments }) => (
         <h4>{comment.postedBy}</h4>
         <p>{comment.text}</p>
       </div>
-    ))};
+    ))}
   </>
 );
 
