@@ -1,9 +1,9 @@
 @use '../base/color' as c;
-@use '../base/variables' as v;
+@use '../base/variables' as var;
 
 .comment {
   padding: 1rem;
   margin-bottom: 20px;
-  border-radius: v.$border-radius;
+  border-radius: var.$border-radius;
   background-color: c.$gray-200;
 }

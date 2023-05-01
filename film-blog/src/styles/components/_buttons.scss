@@ -1,0 +1,20 @@
+@use "sass:color";
+@use '../base/color' as c;
+@use '../base/variables' as var;
+
+button {
+  display: inline-block;
+  margin-bottom: 0.25rem;
+  padding: var.$btn-padding-y var.$btn-padding-x;
+  background-color: var.$btn-bg-color;
+  border: none;
+  color: white;
+  border-radius: var.$btn-border-radius;
+  font-size: var.$btn-font-size;
+  font-weight: bold;
+
+  &:hover {
+    background-color: c.$primary;
+    cursor: pointer;
+  }
+}

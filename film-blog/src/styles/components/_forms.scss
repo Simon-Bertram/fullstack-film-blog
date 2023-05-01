@@ -1,0 +1,18 @@
+.form-group {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1.5rem 0;
+  border: 1px dotted red;
+}
+
+label {
+  display: inline-block;
+  width: 90px;
+  margin-bottom: 0.5rem;
+}
+
+.add-comment-form {
+  margin: 0 auto;
+  width: 750px;
+  padding: 1rem;
+}

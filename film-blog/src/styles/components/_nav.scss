@@ -1,5 +1,5 @@
-@use '../base/color' as *;
-@use '../base/variables' as *;
+@use '../base/color' as c;
+@use '../base/variables' as var;
 
 nav {
 
@@ -11,13 +11,13 @@ nav {
 
   a {
     display: block;
-    padding: $nav-link-padding-y $nav-link-padding-x;
+    padding: var.$nav-link-padding-y var.$nav-link-padding-x;
     color: inherit;
     text-decoration: none;
     transition: color .15s ease-in-out;
 
     &:hover {
-      color: $success;
+      color: c.$success;
     }
   }
 
