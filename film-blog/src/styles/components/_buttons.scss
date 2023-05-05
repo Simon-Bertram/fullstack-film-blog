@@ -18,3 +18,16 @@ button {
     cursor: pointer;
   }
 }
+
+#hamburger {
+  background-color: initial;
+
+  &:hover {
+    background-color: c.$success;
+    cursor: pointer;
+  }
+
+  &:focus {
+    outline: 1px solid c.$success;
+  }
+}

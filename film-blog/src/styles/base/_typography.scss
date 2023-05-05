@@ -36,4 +36,16 @@ a {
 
 p {
   margin-bottom: 1.5rem;
+  line-height: 1.6;
+  // max-width: 75ch;
+  // word-break: break-word;
+}
+
+.lead {
+  font-size: 1.5rem;
+}
+
+.block-quote {
+  font-size: 1.3rem;
+  font-weight: bold;
 }

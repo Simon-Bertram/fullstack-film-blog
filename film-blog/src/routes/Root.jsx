@@ -6,8 +6,10 @@ const Root = () => {
   return (
     <>
       <Header />
-      <main>
-        <Outlet />
+      <main id="main" role="main">
+        <div className="container">
+          <Outlet />
+        </div>
       </main>
       <Footer />
     </>

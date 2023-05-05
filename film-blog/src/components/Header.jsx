@@ -3,12 +3,16 @@ import Nav from "./Nav";
 
 const Header = () => {
   return (
-    <header id="main-header">
-      <div className="container">
-        <Nav />
-        <Branding />
-      </div>
-    </header>
+    <>
+      <a href="#main" className="visually-hidden">Skip to main content</a>
+      <header id="main-header" role="navigation">
+        <div className="container">
+          .
+          <Nav />
+          <Branding />
+        </div>
+      </header>
+    </>
   )
 }
 

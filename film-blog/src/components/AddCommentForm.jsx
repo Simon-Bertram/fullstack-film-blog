@@ -46,7 +46,7 @@ const AddCommentForm = ({ articleName, onArticleUpdated }) => {
             </textarea>
           </li>
           <li>
-            <button type='submit' onClick={addComment}>Add Comment</button>
+            <button onClick={addComment}>Add Comment</button>
           </li>
         </ul>
       </fieldset>  
