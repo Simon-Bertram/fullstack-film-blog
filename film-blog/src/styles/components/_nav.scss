@@ -25,3 +25,34 @@ nav {
     display: flex;
   }
 }
+
+#hamburger {
+  margin: 1rem;
+}
+
+@media (min-width: 600px) {
+  #hamburger {
+    display: none;
+  }
+}
+
+#hamburger[aria-expanded='true'] {
+  color: #000;
+}
+#hamburger[aria-expanded='true'] svg {
+  background: #262262;
+  fill: white;
+}
+#hamburger[aria-expanded='true'] span {
+  position: static;
+}
+#hamburger[aria-expanded='true'] #expanded {
+  display: block;
+}
+#hamburger[aria-expanded="true"] + .main-nav {
+  display: block;
+}
+
+.js-enabled .main-nav {
+  display: none;
+}

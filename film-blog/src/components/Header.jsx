@@ -7,7 +7,6 @@ const Header = () => {
       <a href="#main" className="visually-hidden">Skip to main content</a>
       <header id="main-header" role="navigation">
         <div className="container">
-          .
           <Nav />
           <Branding />
         </div>

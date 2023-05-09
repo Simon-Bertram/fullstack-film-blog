@@ -27,11 +27,10 @@ const AddCommentForm = ({ articleName, onArticleUpdated }) => {
         <ul>
           <li className="form-group">
             <label htmlFor="name">Name:</label>
-            <input
-              id='name'
+            <input 
+              type="text"
+              onChange={e => setName(e.target.value)}
               value={name}
-              onChange={e => setName(e.target.name)}
-              type="text" 
             />
           </li>
           <li className="form-group">
@@ -46,7 +45,7 @@ const AddCommentForm = ({ articleName, onArticleUpdated }) => {
             </textarea>
           </li>
           <li>
-            <button onClick={addComment}>Add Comment</button>
+            <button type='submit' onClick={addComment}>Add Comment</button>
           </li>
         </ul>
       </fieldset>  
