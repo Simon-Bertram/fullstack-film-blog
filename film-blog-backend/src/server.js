@@ -1,5 +1,14 @@
 import express from 'express';
 import { db, connectToDb } from './db.js';
+import fs from 'fs';
+import admin from 'firebase-admin';
+
+const credentials = JSON.parse(
+  fs.readFileSync('../credentials.json')
+);
+admin.initializeApp({
+  credential: admin.credential.cert(credentials),
+});
 
 const app = express();
 app.use(express.json());
@@ -41,7 +50,7 @@ app.post('/api/articles/:name/comments', async (req, res) => {
   const article = await db.collection('articles').findOne({ name });
 
   if (article) {
-    res.json(article);
+    res.json(articlecd);
   } else {
     res.send('That article doesn\'t exist.');
   }

@@ -1,6 +1,11 @@
 
 # Created by https://www.gitignore.io/api/node,vim,git,macos,linux,sublimetext
 
+credentials.json
+
+# Mongo db
+mongo-db-data
+
 ### Git ###
 *.orig
 
@@ -154,6 +159,3 @@ Session.vim
 tags
 
 # End of https://www.gitignore.io/api/node,vim,git,macos,linux,sublimetext
-
-# Mongo db
-mongo-db-data
