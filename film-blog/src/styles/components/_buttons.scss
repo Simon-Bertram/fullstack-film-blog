@@ -31,3 +31,8 @@ button {
     outline: 1px solid c.$success;
   }
 }
+
+form button {
+  display: block;
+  margin: 1rem 0;
+}
