@@ -46,11 +46,7 @@ const LoginPage = () => {
               />
             </li>
           </ul>
-          <button 
-           type="submit"
-           onClick={logIn}
-          >
-            Log In</button>
+          <button type="submit" onClick={logIn}>Log In</button>
           <Link to="/create-account">Don't have an account? Create one here</Link>
         </fieldset>
       </form>
