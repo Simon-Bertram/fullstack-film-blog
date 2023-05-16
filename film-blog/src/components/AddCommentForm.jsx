@@ -28,6 +28,7 @@ const AddCommentForm = ({ articleName, onArticleUpdated }) => {
     >
       <fieldset>
         <legend>Add a Comment</legend>
+        {user && <p>You are posting as {user.email}</p>}
         <ul>
           <li className="form-group">
             <label htmlFor="name">Name:</label>

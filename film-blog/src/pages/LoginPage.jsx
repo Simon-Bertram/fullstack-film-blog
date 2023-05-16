@@ -14,6 +14,7 @@ const LoginPage = () => {
       await signInWithEmailAndPassword(getAuth(), email, password);
       navigate('/articles');
     } catch (error) {
+      console.error(error.message);
       setError(error.message);
     }
   }
@@ -27,10 +28,10 @@ const LoginPage = () => {
           <legend>Login</legend>
           <ul>
             <li className="form-group">
-              <label htmlFor="username">Username:</label>
+              <label htmlFor="email">Email:</label>
               <input 
-                type="text" 
-                id="username"
+                type="email" 
+                id="email"
                 placeholder="Your email address"
                 value={email}
                 onChange={e => setEmail(e.target.value)} 
@@ -41,6 +42,7 @@ const LoginPage = () => {
               <input 
                 type="password" 
                 id="password" 
+                placeholder="Your password"
                 value={password}
                 onChange={e => setPassword(e.target.value)}
               />

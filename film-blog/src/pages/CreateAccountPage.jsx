@@ -4,6 +4,7 @@ import { getAuth, createUserWithEmailAndPassword } from 'firebase/auth';
 
 const CreateAccountPage = () => {
   const [email, setEmail] = useState('');
+  const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const [error, setError] = useState('');
@@ -34,11 +35,21 @@ const CreateAccountPage = () => {
             <li className="form-group">
               <label htmlFor="username">Username:</label>
               <input 
-                type="text" 
+                type="email" 
                 id="username"
                 value={email}
                 onChange={e => setEmail(e.target.value)} 
                 placeholder="Your email address"
+              />
+            </li>
+            <li className="form-group">
+              <label htmlFor="username">Username:</label>
+              <input 
+                type="text" 
+                id="username"
+                placeholder="This will be visible to other users"
+                value={username}
+                onChange={e => setUsername(e.target.value)} 
               />
             </li>
             <li className="form-group">
@@ -52,21 +63,19 @@ const CreateAccountPage = () => {
               />
             </li>
             <li className="form-group">
-              <label htmlFor="password">Confirm Password:</label>
+              <label htmlFor="confirmPassword">Confirm Password:</label>
               <input 
                 type="password" 
-                id="password" 
+                id="confirmPassword" 
                 value={confirmPassword}
                 onChange={e => setConfirmPassword(e.target.value)}
                 placeholder="Re-enter your password"
               />
             </li>
           </ul>
-          <button 
-           type="submit"
-           onClick={createAccount}
-          >
-            Create Account</button>
+          <button type="submit" onClick={createAccount}>
+            Create Account
+          </button>
           <Link to="/login">Already have an account? Log in here.</Link>
         </fieldset>
       </form>

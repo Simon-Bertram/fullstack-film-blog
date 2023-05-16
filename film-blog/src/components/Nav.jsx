@@ -1,4 +1,6 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
+import useUser from "../hooks/useUser";
+import { getAuth, signOut } from "firebase/auth";
 import Hamburger from "./Hamburger";
 
 const links = [
@@ -9,6 +11,9 @@ const links = [
 ];
 
 const Nav = () => {
+  const navigate = useNavigate();
+  const { user } = useUser();
+
   return (
     <nav aria-label="main" role="navigation">
       <Hamburger />
@@ -24,6 +29,16 @@ const Nav = () => {
           </li>
         ))}
       </ul>
+      <div className="nav-right">
+        { user
+          ? <button className="accent-button" onClick={() => {
+              signOut(getAuth());
+          }}>Logout</button>
+          : <button className="accent-button" onClick={() => {
+              navigate('/login');
+          }}>Log In</button>
+        }
+      </div>
     </nav>
   )
 }

@@ -10,7 +10,7 @@ import NotFoundPage from './NotFoundPage';
 const ArticlePage = () => {
   const [articleInfo, setArticleInfo] = useState({ upvotes: 0, comments: [] });
   const { articleId } = useParams();
-
+  const { canUpvote } = articleInfo;
   const { user, isLoading } = useUser();
 
   const navigate = useNavigate();
@@ -25,7 +25,7 @@ const ArticlePage = () => {
     }
 
     loadArticleInfo();
-  }, []);
+  }, [isLoading, user]);
 
   const article = articles.find(article => article.name === articleId);
 
@@ -46,7 +46,7 @@ const ArticlePage = () => {
       <h1>{article.title}</h1>
       <div className='upvotes-section'>
         {user
-          ? <button onClick={addUpvote}>Upvote</button>
+          ? <button onClick={addUpvote}>{canUpvote ? 'Upvote' : 'Already upvoted'}</button>
           : <button onClick={() => navigate('/login') }>
               Log in to upvote
             </button>

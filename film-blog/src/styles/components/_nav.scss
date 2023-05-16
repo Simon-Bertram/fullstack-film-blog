@@ -1,5 +1,6 @@
 @use '../base/color' as c;
 @use '../base/variables' as var;
+@use '../base/typography' as *;
 
 nav {
   display: flex;
@@ -29,6 +30,23 @@ nav {
 
   .nav-branding {
     display: flex;
+  }
+
+  .nav-right {
+    position: absolute;
+    top: 28px;
+    right: 8px;
+
+    .accent-button {
+      font-family: $heading-font;
+      background-color: c.$info;
+      color: white;
+
+      &:hover {
+        background-color: c.$teal;
+        color: c.$primary;
+      }
+    }
   }
 }
 
