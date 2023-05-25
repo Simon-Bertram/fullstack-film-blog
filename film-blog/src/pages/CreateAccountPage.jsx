@@ -4,7 +4,7 @@ import { getAuth, createUserWithEmailAndPassword } from 'firebase/auth';
 
 const CreateAccountPage = () => {
   const [email, setEmail] = useState('');
-  const [username, setUsername] = useState('');
+  const [displayName, setDisplayName] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const [error, setError] = useState('');
@@ -17,7 +17,7 @@ const CreateAccountPage = () => {
         setError('Passwords do not match');
         return;
       }
-      await createUserWithEmailAndPassword(getAuth(), email, password);
+      await createUserWithEmailAndPassword(getAuth(), email, displayName, password);
       navigate('/articles');
     } catch (error) {
       setError(error.message);
@@ -33,7 +33,7 @@ const CreateAccountPage = () => {
           <legend>Create Account</legend>
           <ul>
             <li className="form-group">
-              <label htmlFor="username">Username:</label>
+              <label htmlFor="username">Email:</label>
               <input 
                 type="email" 
                 id="username"
@@ -48,8 +48,8 @@ const CreateAccountPage = () => {
                 type="text" 
                 id="username"
                 placeholder="This will be visible to other users"
-                value={username}
-                onChange={e => setUsername(e.target.value)} 
+                value={displayName}
+                onChange={e => setDisplayName(e.target.value)} 
               />
             </li>
             <li className="form-group">
