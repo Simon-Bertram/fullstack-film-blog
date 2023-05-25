@@ -11,7 +11,7 @@ import HomePage from './pages/Homepage'
 import AboutPage from './pages/AboutPage'
 import ArticlePage from './pages/ArticlePage'
 import ArticlesListPage from './pages/ArticlesListPage'
-import SubmitReview from './pages/SubmitReview'
+import SubmitReviewPage from './pages/SubmitReviewPage'
 import NotFoundPage from './pages/NotFoundPage'
 import LoginPage from './pages/LoginPage'
 import CreateAccountPage from './pages/CreateAccountPage'
@@ -46,7 +46,7 @@ const router = createBrowserRouter(createRoutesFromElements(
     <Route path="articles/:articleId" element={<ArticlePage />}/>
     <Route path='login' element={<LoginPage />} />
     <Route path='create-account' element={<CreateAccountPage />} />
-    <Route path="new-review" element={<SubmitReview />} />
+    <Route path="new-review" element={<SubmitReviewPage />} />
     <Route path="*" element={<NotFoundPage />} />
   </Route>
 ));

@@ -2,7 +2,6 @@
   display: flex;
   flex-wrap: wrap;
   margin: 1.5rem 0;
-  border: 1px dotted gray;
 }
 
 label {
@@ -15,4 +14,16 @@ label {
   margin: 0 auto;
   width: 750px;
   padding: 1rem;
+}
+
+@media (min-width: 560px) {
+  .form-group input {
+    min-width: 75%;
+  }
+}
+
+@media (min-width: 1000px) {
+  .form-group input {
+    min-width: 50%;
+  }
 }
