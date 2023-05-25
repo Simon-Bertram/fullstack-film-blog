@@ -92,6 +92,19 @@ app.post('/api/articles/:name/comments', async (req, res) => {
   }
 });
 
+app.post('/api/submit-review', async (req, res) => {
+  const { name } = req.params;
+  const { title, content } = req.body;
+  console.log(`posted by ${name}. Title: ${title}, `)
+
+  await db.collection('articles').insertOne(newReview, (err, result) => {
+    if (err) {
+      console.log(err);
+      process.exit(1);
+    }
+  })
+});
+
 connectToDb(() => {
   console.log('Successfully connected to database.');
   app.listen(8000, () => {
