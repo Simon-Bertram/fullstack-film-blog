@@ -3,7 +3,7 @@ import axios from 'axios';
 import useUser from '../hooks/useUser';
 
 const AddCommentForm = ({ articleName, onArticleUpdated }) => {
-  const [name, setName] = useState('');
+  const [displayName, setDisplayName] = useState('');
   const [commentText, setCommentText] = useState('');
   const { user } = useUser();
 
@@ -11,12 +11,12 @@ const AddCommentForm = ({ articleName, onArticleUpdated }) => {
     const token = user && await user.getIdToken();
     const headers = token ? { authtoken: token} : {};
     const response = await axios.post(`http://localhost:8000/api/articles/${articleName}/comments`, {
-      postedBy: name,
+      postedBy: displayName,
       text: commentText,
     }, { headers } );
     const updatedArticle = response.data;
     onArticleUpdated(updatedArticle);
-    setName('');
+    setDisplayName('');
     setCommentText('');
   }
 
@@ -28,14 +28,14 @@ const AddCommentForm = ({ articleName, onArticleUpdated }) => {
     >
       <fieldset>
         <legend>Add a Comment</legend>
-        {user && <p>You are posting as {user.username}</p>}
+        {user && <p>You are posting as {user.displayName}</p>}
         <ul>
           <li className="form-group">
             <label htmlFor="name">Name:</label>
             <input 
               type="text"
-              onChange={e => setName(e.target.value)}
-              value={name}
+              onChange={e => setDisplayName(e.target.value)}
+              value={displayName}
             />
           </li>
           <li className="form-group">
