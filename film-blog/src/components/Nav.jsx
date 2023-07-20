@@ -6,7 +6,7 @@ import Hamburger from "./Hamburger";
 const links = [
   {name: "Home", path: "/"},
   {name: "About", path: "about"},
-  {name: "Articles", path: "articles"},
+  {name: "Reviews", path: "reviews"},
   {name: "Submit a review", path: "new-review"}
 ];
 

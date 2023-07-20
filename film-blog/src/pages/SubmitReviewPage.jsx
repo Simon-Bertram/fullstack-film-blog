@@ -21,7 +21,7 @@ const SubmitReview = () => {
 
   }
 
-  const replaceSpacesWithDashes = (string) => {
+  function replaceSpacesWithDashes(string) {
     string = string.toLowerCase();
     console.log(string);
     

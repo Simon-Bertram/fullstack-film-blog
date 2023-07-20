@@ -1,10 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,700;1,400;1,700&family=Roboto:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+
+// font-family: 'Archivo Black', sans-serif;
 
 $heading-font: 'Roboto', sans-serif;
 $body-font: 'Lora', serif;
 
 html {
-  font-size: 16px;
+  font-size: 18px;
 }
 
 body {
@@ -40,8 +43,8 @@ a {
 p {
   margin-bottom: 1.5rem;
   line-height: 1.6;
-  // max-width: 75ch;
-  // word-break: break-word;
+  min-width: 35ch;
+  max-width: 85ch;
 }
 
 .lead {

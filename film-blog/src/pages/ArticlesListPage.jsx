@@ -4,7 +4,7 @@ import articles from './article-content';
 const ArticlesListPage = () => {
   return (
     <>
-      <h1>Articles</h1>
+      <h1>Latest Reviews</h1>
       <ArticlesList articles={articles} />
     </>
   )
