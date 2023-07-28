@@ -7,10 +7,9 @@ import {
   Route,
 } from 'react-router-dom'
 import Root from './routes/Root'
-import HomePage from './pages/Homepage'
+import HomePage from './pages/HomePage'
 import AboutPage from './pages/AboutPage'
 import ArticlePage from './pages/ArticlePage'
-import ArticlesListPage from './pages/ArticlesListPage'
 import SubmitReviewPage from './pages/SubmitReviewPage'
 import NotFoundPage from './pages/NotFoundPage'
 import LoginPage from './pages/LoginPage'
@@ -42,7 +41,6 @@ const router = createBrowserRouter(createRoutesFromElements(
   <Route path='/' element={<Root />}>
     <Route index element={<HomePage />} />
     <Route path='about' element={<AboutPage />} />
-    <Route path='reviews' element={<ArticlesListPage />} />
     <Route path="articles/:articleId" element={<ArticlePage />}/>
     <Route path='login' element={<LoginPage />} />
     <Route path='create-account' element={<CreateAccountPage />} />
