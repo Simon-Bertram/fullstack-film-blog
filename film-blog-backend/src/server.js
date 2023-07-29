@@ -23,6 +23,7 @@ app.use(async (req, res, next) => {
   }  
 
   req.user = req.user || {};
+  console.log(req.user); // View object - to be deleted **
 
   next();
 });
