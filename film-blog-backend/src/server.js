@@ -6,6 +6,8 @@ import admin from 'firebase-admin';
 const app = express();
 app.use(express.json());
 
+let totalPostCount = 0;
+
 const credentials = JSON.parse(fs.readFileSync('src/credentials.json'));
 admin.initializeApp({
   credential: admin.credential.cert(credentials),
@@ -17,6 +19,7 @@ app.use(async (req, res, next) => {
   if (authtoken) {
     try {
       req.user = await admin.auth().verifyIdToken(authtoken);
+      const { uid } = req.user;
     } catch (error) {
       return res.sendStatus(400);
     }
